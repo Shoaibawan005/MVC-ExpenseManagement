@@ -1,3 +1,5 @@
+using SpendSmart.Models;
+
 namespace SpendSmart
 {
     public class Program
@@ -9,6 +11,9 @@ namespace SpendSmart
             // Add services to the container.
             builder.Services.AddControllersWithViews();
 
+            //builder.Services.AddDbContext<ExpensesDbContext>(options => 
+            //    options..UseInMemoryDatabase()
+            //    );
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
