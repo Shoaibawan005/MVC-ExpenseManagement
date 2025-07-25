@@ -25,9 +25,15 @@ namespace SpendSmart.Controllers
             var allExpenses = _expensesDbContext.Expenses.ToList();
             return View(allExpenses);
         }
-        public IActionResult CreateEditExpense()
+        public IActionResult CreateEditExpense(int id)
         {
+            var item = _expensesDbContext.Expenses.FirstOrDefault(x  => x.Id == id);
             return View();
+        }
+
+        public IActionResult DeleteExpense(int id)
+        {
+           return RedirectToAction("Expenses");
         }
         public IActionResult CreateEditExpenseForm(Expenses model)
         {
