@@ -24,6 +24,10 @@
                 <th>
                     Description
                 </th>
+
+                <td>
+                    Actions
+                </td>
             </tr>
 
         </thead>
@@ -44,6 +48,12 @@
 
                         <td>
                             @expense.Description
+                        </td>
+
+                        <td>
+                            <a asp-action="CreateEditExpense">Edit</a>
+                            <a asp-action="">Delete</a>
+
                         </td>
                     </tr>
                 }
