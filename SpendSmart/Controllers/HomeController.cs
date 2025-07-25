@@ -31,6 +31,8 @@ namespace SpendSmart.Controllers
         public IActionResult CreateEditExpenseForm(Expenses model)
         {
 
+            _expensesDbContext.Expenses.Add(model);
+            _expensesDbContext.SaveChanges();
             return RedirectToAction("Expenses");
         }
 

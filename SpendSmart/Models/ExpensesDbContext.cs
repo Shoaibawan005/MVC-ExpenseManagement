@@ -6,7 +6,7 @@ namespace SpendSmart.Models
     {
 
         
-        DbSet<Expenses> Expenses { get; set; }
+        public DbSet<Expenses> Expenses { get; set; }
 
         public ExpensesDbContext(DbContextOptions<ExpensesDbContext> options) : base(options)
         {
