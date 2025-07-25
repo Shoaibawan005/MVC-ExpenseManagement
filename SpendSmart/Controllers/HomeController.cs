@@ -8,9 +8,11 @@ namespace SpendSmart.Controllers
     {
         private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        private readonly ExpensesDbContext _expensesDbContext;
+        public HomeController(ILogger<HomeController> logger, ExpensesDbContext expensesDbContext)
         {
             _logger = logger;
+            _expensesDbContext = expensesDbContext;
         }
 
         public IActionResult Index()
