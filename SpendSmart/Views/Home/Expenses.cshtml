@@ -10,9 +10,14 @@
 
         <h3 class="display-5"><strong>Expenses</strong></h3>
 
-        <button asp-controller="Home" asp-action="CreateEditExpense" class="btn btn-outline-primary">
+        <a asp-controller="Home" asp-action="CreateEditExpense" class="btn btn-outline-primary">
+            <i class="bi bi-plus-lg"></i>Add New
+        </a>
+
+
+        @* <button asp-area="" asp-controller="Home" asp-action="CreateEditExpense" class="btn btn-outline-primary">
             Add New 
-        </button>
+        </button> *@
     </div>
     <hr />
     <br />
