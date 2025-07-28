@@ -1,10 +1,99 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
+<!-- Hero Section -->
+<div class="py-5 text-white" style="background: linear-gradient(to right, #4e54c8, #8f94fb); border-radius: 0 0 30px 30px;">
+    <div class="container text-center">
+        <h1 class="display-4 fw-bold">Welcome, Shoaib Abbas 👋</h1>
+        <p class="lead">Your personal expense manager. Stay organized. Spend wisely.</p>
+    </div>
+</div>
 
-<div class="text-center">
-    <h1 class="display-4">Hi, Shoaib Abbas</h1>
-    <a asp-controller="Home" asp-action="Expenses" class="btn btn-outline-primary">Overview</a>
-    <a asp-action="CreateEditExpense" class="btn btn-outline-secondary">Create New</a>
+<!-- Action Cards -->
+<div class="container mt-5">
+    <div class="row g-4 justify-content-center">
+        <div class="col-md-4">
+            <div class="card text-center shadow-lg border-0" style="background: rgba(255,255,255,0.85); border-radius: 20px;">
+                <div class="card-body">
+                    <i class="bi bi-graph-up-arrow fs-1 text-primary mb-3"></i>
+                    <h5 class="card-title">Expense Overview</h5>
+                    <p class="card-text">Track your expenses and stay on top of your budget.</p>
+                    <a asp-controller="Home" asp-action="Expenses" class="btn btn-outline-primary">View Overview</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card text-center shadow-lg border-0" style="background: rgba(255,255,255,0.85); border-radius: 20px;">
+                <div class="card-body">
+                    <i class="bi bi-plus-circle fs-1 text-success mb-3"></i>
+                    <h5 class="card-title">Add New Expense</h5>
+                    <p class="card-text">Log a new expense quickly and easily.</p>
+                    <a asp-controller="Home" asp-action="CreateEditExpense" class="btn btn-outline-success">Create New</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card text-center shadow-lg border-0" style="background: rgba(255,255,255,0.85); border-radius: 20px;">
+                <div class="card-body">
+                    <i class="bi bi-pie-chart fs-1 text-warning mb-3"></i>
+                    <h5 class="card-title">Reports</h5>
+                    <p class="card-text">Visualize your spending by category and date.</p>
+                    <a href="#" class="btn btn-outline-warning">View Reports</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
+<!-- Info Section -->
+<div class="container mt-5">
+    <div class="card shadow-sm border-0" style="border-radius: 20px;">
+        <div class="card-body p-4">
+            <h4 class="fw-semibold mb-3">Why Expense Tracking Matters</h4>
+            <p class="text-muted">
+                Managing your expenses helps you stay financially healthy. By tracking your income and spending, you become more conscious of your habits, avoid overspending, and set achievable savings goals.
+            </p>
+            <p class="text-muted">
+                Our tool lets you log expenses easily, monitor your financial health through charts, and generate insightful reports – all in one place.
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- Tips Section -->
+<div class="container mt-5">
+    <h4 class="mb-4 text-center">💡 Smart Budgeting Tips</h4>
+    <div class="row g-3">
+        <div class="col-md-4">
+            <div class="card shadow-sm border-start border-success border-4" style="border-radius: 15px;">
+                <div class="card-body">
+                    <h6 class="fw-bold"><i class="bi bi-cash-stack text-success"></i> Stick to a Monthly Budget</h6>
+                    <p class="text-muted small">Create a monthly budget and review it weekly to stay on track.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card shadow-sm border-start border-primary border-4" style="border-radius: 15px;">
+                <div class="card-body">
+                    <h6 class="fw-bold"><i class="bi bi-clock-history text-primary"></i> Record Daily</h6>
+                    <p class="text-muted small">Logging daily ensures accuracy and builds strong financial habits.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card shadow-sm border-start border-warning border-4" style="border-radius: 15px;">
+                <div class="card-body">
+                    <h6 class="fw-bold"><i class="bi bi-piggy-bank text-warning"></i> Save Before You Spend</h6>
+                    <p class="text-muted small">Prioritize savings first, then allocate for needs and wants for better savings.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Final Footer Tip -->
+<div class="container mt-5 text-center">
+    <div class="alert alert-info shadow-sm" style="border-radius: 15px;">
+        🚀 Pro Tip: The more consistent you are with expense tracking, the faster you'll reach your financial goals!
+    </div>
 </div>
