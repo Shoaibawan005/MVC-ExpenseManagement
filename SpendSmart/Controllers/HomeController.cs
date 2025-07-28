@@ -1,6 +1,7 @@
-using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using SpendSmart.Models;
+using System.Diagnostics;
 
 namespace SpendSmart.Controllers
 {
@@ -17,7 +18,31 @@ namespace SpendSmart.Controllers
 
         public IActionResult Index()
         {
+            SeedDummyExpenses();
             return View();
+        }
+
+        private void SeedDummyExpenses()
+        {
+            if (!_expensesDbContext.Expenses.Any())
+            {
+                var dummyExpenses = new List<Expenses>
+            {
+                new Expenses { Value = 254.36m, Description = "Lunch at Cafe" },
+                new Expenses { Value = 250.45m, Description = "Grocery Shopping" },
+                new Expenses { Value = 19.67m, Description = "Mobile Recharge" },
+                new Expenses { Value = 16.49m, Description = "Fuel" },
+                new Expenses { Value = 15.98m, Description = "Electricity Bill" },
+                new Expenses { Value = 49.91m,  Description = "Snacks & Tea" },
+                new Expenses { Value = 8.09m, Description = "Movie Night" },
+                new Expenses { Value = 54.29m, Description = "Monthly Rent" },
+                new Expenses { Value = 18.99m,  Description = "Laundry Service" },
+                new Expenses { Value = 9.99m, Description = "Gym Membership" }
+            };
+
+                _expensesDbContext.Expenses.AddRange(dummyExpenses);
+                _expensesDbContext.SaveChanges();
+            }
         }
 
         public IActionResult Expenses()
