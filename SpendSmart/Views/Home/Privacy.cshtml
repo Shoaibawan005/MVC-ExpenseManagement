@@ -1,6 +1,65 @@
 ﻿@{
-    ViewData["Title"] = "Privacy Policy";
+    ViewData["Title"] = "Expense History";
 }
-<h1>@ViewData["Title"]</h1>
 
-<p>Use this page to detail your site's privacy policy.</p>
+<div class="container mt-5">
+    <h2 class="fw-bold mb-4 text-center">💸 Expense History</h2>
+
+    <div class="row g-4">
+
+        <!-- Total Expenditure Summary -->
+        <div class="col-md-12">
+            <div class="card shadow-sm border-0">
+                <div class="card-body text-center">
+                    <h5 class="card-title mb-2">Total Spent This Year</h5>
+                    <span class="badge bg-primary fs-4 p-2">$5,320.75</span>
+                    <p class="mt-3 text-muted">A breakdown of your spending across recent months</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Monthly Breakdown -->
+        <div class="col-md-4">
+            <div class="card shadow-sm border-start border-4 border-success">
+                <div class="card-body">
+                    <h6 class="card-title">📅 June 2025</h6>
+                    <p class="mb-1">Total Spent: <strong>$1,250.00</strong></p>
+                    <p class="text-muted small">Groceries, utilities, and entertainment</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card shadow-sm border-start border-4 border-warning">
+                <div class="card-body">
+                    <h6 class="card-title">📅 May 2025</h6>
+                    <p class="mb-1">Total Spent: <strong>$1,760.00</strong></p>
+                    <p class="text-muted small">Shopping and travel</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card shadow-sm border-start border-4 border-danger">
+                <div class="card-body">
+                    <h6 class="card-title">📅 April 2025</h6>
+                    <p class="mb-1">Total Spent: <strong>$890.75</strong></p>
+                    <p class="text-muted small">Essentials and subscriptions</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chart Section -->
+        <div class="col-md-12">
+            <div class="card shadow-sm mt-4">
+                <div class="card-body text-center">
+                    <h5 class="card-title">📈 Expense Trend Chart</h5>
+                    <img src="https://quickchart.io/chart?c={type:'bar',data:{labels:['Apr','May','Jun'],datasets:[{label:'Expenses',data:[890.75,1760.00,1250.00]}]}}"
+                         alt="Expense Chart" class="img-fluid rounded mt-3" style="max-height: 300px;" />
+                    <p class="text-muted mt-2 small">This chart shows your monthly spending trend.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

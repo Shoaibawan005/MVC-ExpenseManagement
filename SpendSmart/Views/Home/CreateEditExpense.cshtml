@@ -4,23 +4,36 @@
 
 @model SpendSmart.Models.Expenses
 
-<div class="text-center">
-    <h1 class="display-4">Manage Expense</h1>
+<div class="container mt-5" style="max-width: 600px;">
+    <div class="card shadow-lg border-0" style="border-radius: 20px;">
+        <div class="card-body p-5">
+            <h2 class="text-center mb-4 fw-bold">💸 Manage Expense</h2>
+
+            <form asp-controller="Home" asp-action="CreateEditExpenseForm">
+
+                <!-- Hidden ID -->
+                <input hidden type="number" class="form-control" asp-for="Id" />
+
+                <!-- Value Field -->
+                <div class="mb-4">
+                    <label class="form-label fw-semibold"><i class="bi bi-currency-dollar"></i> Value</label>
+                    <input type="number" class="form-control form-control-lg" asp-for="Value" step="0.01" placeholder="Enter amount" />
+                </div>
+
+                <!-- Description Field -->
+                <div class="mb-4">
+                    <label class="form-label fw-semibold"><i class="bi bi-pencil-square"></i> Description</label>
+                    <input type="text" class="form-control form-control-lg" asp-for="Description" placeholder="e.g. Grocery, Rent, Travel..." />
+                </div>
+
+                <!-- Submit Button -->
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-primary btn-lg">
+                        <i class="bi bi-check-circle-fill"></i> Save Expense
+                    </button>
+                </div>
+
+            </form>
+        </div>
+    </div>
 </div>
-
-<form asp-controller="Home" asp-action="CreateEditExpenseForm">
-
-    @* <label>Id</label> *@
-    <input hidden type="number" class="form-control" placeholder="0" asp-for="Id"/>
-
-    <label class="mt-4">Value $</label>
-    <input type="number" class="form-control"asp-for="Value" step="0.01" />
-
-    <label class="mt-4">Description</label>
-    <input type="text" class="form-control" placeholder="Add a description" asp-for="Description" />
-
-    <button type="submit" class="btn btn-outline-primary mt-4">
-        OK
-    </button>
-
-</form>
