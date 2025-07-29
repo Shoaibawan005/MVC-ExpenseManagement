@@ -37,7 +37,9 @@ namespace SpendSmart.Controllers
                 new Expenses { Value = 8.09m, Description = "Movie Night" },
                 new Expenses { Value = 54.29m, Description = "Monthly Rent" },
                 new Expenses { Value = 18.99m,  Description = "Laundry Service" },
-                new Expenses { Value = 9.99m, Description = "Gym Membership" }
+                new Expenses { Value = 9.99m, Description = "Gym Membership" },
+                new Expenses { Value = 29.07m, Description = "Subscriptions" }
+
             };
 
                 _expensesDbContext.Expenses.AddRange(dummyExpenses);
