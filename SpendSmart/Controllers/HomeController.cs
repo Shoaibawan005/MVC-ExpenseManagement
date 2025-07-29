@@ -63,7 +63,7 @@ namespace SpendSmart.Controllers
                 return View(item);
 
             }
-
+            // If ID is null, means user clicked the create new expense and they want to add a new expense
             return View();
         }
 
