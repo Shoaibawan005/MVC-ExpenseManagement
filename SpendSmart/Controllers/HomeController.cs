@@ -55,7 +55,7 @@ namespace SpendSmart.Controllers
         public IActionResult CreateEditExpense(int? id)
         {
             if (id != null) {
-                //editing -> load item by id
+                //editing -> load item by id 
 
                 var item = _expensesDbContext.Expenses.SingleOrDefault(x => x.Id == id);
                 return View(item);
