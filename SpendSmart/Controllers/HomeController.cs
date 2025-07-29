@@ -58,7 +58,7 @@ namespace SpendSmart.Controllers
         {
             if (id != null) {
                 //editing -> load item by id 
-
+                // if id is not null, like user cliked the item from the table then show the data in the form for updation
                 var item = _expensesDbContext.Expenses.SingleOrDefault(x => x.Id == id);
                 return View(item);
 
