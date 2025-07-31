@@ -90,7 +90,7 @@ namespace SpendSmart.Controllers
             return RedirectToAction("Expenses");
         }
 
-        public IActionResult Privacy()
+        public IActionResult History()
         {
             return View();
         }
