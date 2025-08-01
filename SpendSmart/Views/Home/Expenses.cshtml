@@ -10,7 +10,7 @@
             <h2 class="fw-bold mb-1">Expenses Overview</h2>
             <p class="text-muted mb-0">Track, manage, and edit your spending efficiently.</p>
         </div>
-        <a asp-controller="Home" asp-action="CreateEditExpense" class="btn btn-outline-primary d-flex align-items-center gap-2 px-3 py-2 shadow-sm">
+        <a asp-controller="Home" asp-action="CreateEditExpense" class="btn btn-outline-primary d-flex align-items-center gap-2 px-3 py-2 shadow-lg">
             <i class="bi bi-plus-lg"></i> Add Expense
         </a>
     </div>
@@ -19,7 +19,7 @@
         <strong>Total Expenses:</strong> $@ViewBag.Expenses
     </div>
 
-    <div class="card shadow-sm border-0">
+    <div class="card shadow-lg border-0">
         <div class="card-body p-0">
             <table class="table table-hover mb-0">
                 <thead class="table-light">
@@ -27,7 +27,7 @@
                         <th>#</th>
                         <th>Value ($)</th>
                         <th>Description</th>
-                        <th>Actions</th>
+                        <th style="width: 50px;">Actions</th>
                     </tr>
                 </thead>
                 <tbody>
